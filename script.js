@@ -36,7 +36,7 @@ function displayWord() {
   const innerWord = wordEl.innerText.replace(/[ \n]/g, '');
 
   if (innerWord === selectedWord) {
-    finalMessage.innerText = 'Congratulations! You won! 😃';
+    finalMessage.innerText = 'Congratulations...You found the word! 😃';
     popup.style.display = 'flex';
 
     playable = false;
@@ -47,7 +47,7 @@ function displayWord() {
 function updateWrongLettersEl() {
   // Display wrong letters
   wrongLettersEl.innerHTML = `
-    ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+    ${wrongLetters.length > 0 ? '<p>Try a different letter</p>' : ''}
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
   `;
 
